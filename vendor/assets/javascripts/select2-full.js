@@ -2024,7 +2024,12 @@ S2.define('select2/selection/search',[
       data: item
     });
 
-    this.$search.val(item.text);
+    // Original behavior:
+    // this.$search.val(item.text);
+
+    // Completely delete the selected value
+    this.$search.val('');
+
     this.handleSearch();
   };
 
